@@ -1,0 +1,10 @@
+.skillList{
+    display: flex;
+    gap: 2rem;
+}
+
+.skillList > div{
+    width: 120px;
+    height: 120px;
+    background: var(--accent-bg);
+}

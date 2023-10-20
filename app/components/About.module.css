@@ -1,5 +1,6 @@
 .about{
     margin: 5rem auto;
+    max-width: 1300px;
 }
 
 .about > div {

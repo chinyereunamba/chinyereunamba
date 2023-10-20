@@ -17,6 +17,10 @@ function Header() {
           <span>I am <b>open to</b> offers</span>
         </ul>
       </nav>
+        <div className={style.burger}>
+          <div></div>
+          <div></div>
+        </div>
     </header>
   )
 }

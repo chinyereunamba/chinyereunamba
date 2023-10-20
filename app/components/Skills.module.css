@@ -1,13 +1,13 @@
 .skills{
     margin: 5rem auto;
+    max-width: 1300px;
+
 }
 .skillList{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 5rem;
-    max-width: 1300px;
-    margin: auto;
 }
 
 .skill{

@@ -5,7 +5,7 @@ import Link from "next/link"
 
 function Blog() {
     return (
-        <section className={style.blog}>
+        <section className={style.blog} id="blog">
             <h1 className="title">Blog</h1>
             <div className={style.blog_posts}>
                 <BlogPost />
@@ -20,7 +20,7 @@ export default Blog
 
 function BlogPost() {
     return (
-        <div className={style.blog_post} id="blog">
+        <div className={style.blog_post}>
             <div className={style.img}>
                 <img src="" alt="" />
             </div>

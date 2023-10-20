@@ -1,6 +1,6 @@
 import React from "react"
 import style from "./Contact.module.css"
-import { FaEnvelope, FaPhone, FaLocationPin } from "react-icons/fa6"
+import { FaEnvelope, FaPhone, FaLocationPin, FaLocationCrosshairs } from "react-icons/fa6"
 import Link from "next/link"
 
 function Contact() {
@@ -8,11 +8,14 @@ function Contact() {
         <section className={style.contact} id="contact">
             <h1 className="title">Contact me</h1>
             <div className={style.contact_cards}>
-                <ContactCard contact={"Port Harcourt, Nigeria"} icon={<FaLocationPin />} />
+                <ContactCard
+                    contact={"Port Harcourt, Nigeria"}
+                    icon={<FaLocationCrosshairs />}
+                />
                 <ContactCard
                     contact={
-                        <Link href={"mailto:chinyereunamba@gmail.com"}>
-                            chinyereunamba@gmail.com
+                        <Link href={"mailto:chinyereunamba17@gmail.com"}>
+                            chinyereunamba17@gmail.com
                         </Link>
                     }
                     icon={<FaEnvelope />}
@@ -25,7 +28,6 @@ function Contact() {
                     }
                     icon={<FaPhone />}
                 />
-                
             </div>
         </section>
     )

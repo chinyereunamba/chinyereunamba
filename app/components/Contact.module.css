@@ -1,20 +1,20 @@
-.contact{
+.contact {
     max-width: 1300px;
     width: 100%;
     margin: 5rem auto;
 }
 
-.contact_cards{
+.contact_cards {
     display: flex;
-    gap: 3rem;
+    gap: 2.5rem;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.card{
+.card {
     position: relative;
-    width: 300px;
+    width: 310px;
     height: 130px;
     background: var(--accent-bg);
     border-radius: 30px;
@@ -23,9 +23,15 @@
     align-items: center;
     font-size: var(--font-size-n);
     margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
-.card .icon{
+.card:hover {
+    transform: translateY(-1rem);
+}
+
+.card .icon {
     position: absolute;
     width: 70px;
     height: 70px;

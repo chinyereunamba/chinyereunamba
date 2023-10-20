@@ -1,5 +1,6 @@
 import React from "react"
 import style from "./Intro.module.css"
+import {FaArrowDown} from 'react-icons/fa6'
 
 function Intro() {
     return (
@@ -11,7 +12,9 @@ function Intro() {
                 </div>
             </section>
             <div className={style.down}>
-                <button>Down</button>
+                <button>
+                    <FaArrowDown />
+                </button>
             </div>
         </>
     )

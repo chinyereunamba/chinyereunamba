@@ -1,0 +1,23 @@
+.footer{
+    min-height: 200px;
+    border-radius: 100% 100% 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.social{
+    display: flex;
+    gap: 0.8rem;
+    font-size: var(--font-size-nt);
+}
+
+.footer p{
+    font-size: 18px;
+    
+}
+
+.footer b{
+color: var(--primary-color);
+    font-weight: 700;
+}

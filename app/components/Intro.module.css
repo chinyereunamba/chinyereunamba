@@ -9,6 +9,7 @@
     text-shadow: 5px 5px 0px var(--primary-color);
     mix-blend-mode: screen;
     /* animation: fadeIn 2.5s linear forwards; */
+    cursor: pointer;
 }
 
 /* 
@@ -31,5 +32,13 @@
 }
 
 .down button {
+    height: 60px;
+    width: 60px;
+    background: var(--primary-color);
+    font-size: calc(var(--font-size-n) + .5rem);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: none;
     cursor: pointer;
 }

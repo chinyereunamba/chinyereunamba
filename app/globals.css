@@ -41,10 +41,10 @@
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
  */
-    --background-color: #171717;
+    --background-color: #0f0f0f;
     --primary-color: #3868e3;
     --secondary-color: #0ea5e9;
-    --accent-bg: #262626;
+    --accent-bg: #171717;
     --underline: #007bff;
     --text-color: #d4d4d4;
     --border-color: #e5e7eb;
@@ -52,7 +52,10 @@
     --box-shadow: 10px 0 60px 4px #162859;
     --icon-color-inactive: #a3a3a3;
     --warning-info: #ffa500;
-    --font-size-n: 18px;
+    --font-size-s: 16px;
+    --font-size-n: 20px;
+    --font-size-nt: 26px;
+    --font-size-ms: 45px;
     --font-size-m: 60px;
     --font-size-l: 70px;
     --font-size-xl: 150px;
@@ -113,9 +116,15 @@ body {
     color: var(--text-color);
     background: var(--background-color);
 }
+
 section{
   padding: var(--padding);
 }
+
+p{
+  font-size: var(--font-size-n);
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -125,7 +134,13 @@ a {
   font-size: var(--font-size-m);
   color: var(--title-color);
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 768px){
+  .title{
+    font-size: var(--font-size-ms);
+  }
 }
 
 @media (prefers-color-scheme: dark) {

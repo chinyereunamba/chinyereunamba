@@ -14,7 +14,7 @@ function Header() {
           <li><Link href={'/#blog'}>Blog</Link></li>
         </ul>
         <ul>
-          <li>I am <b>avaliable</b></li>
+          <li>I am <b>open to</b> offers</li>
         </ul>
       </nav>
     </header>

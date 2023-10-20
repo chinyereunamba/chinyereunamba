@@ -18,3 +18,29 @@
 .header nav b{
     color: var(--primary-color);
 }
+
+.header li, .active{
+    position: relative;
+}
+
+.header li:hover::after, .active::after{
+    content: "";
+    position: absolute;
+    bottom: -1.1rem;
+    left: 0;
+    height: 0.4rem;
+    width: 0%;
+    border-radius: 0 30px 10px 0;
+    background: var(--primary-color);
+    animation: swipe 0.5s ease 1 forwards;
+}
+
+@keyframes swipe {
+    0%{
+        width: 0;
+    }
+
+    100%{
+        width: 100%;
+    }
+}

@@ -7,14 +7,14 @@ function Header() {
     <header className={style.header}>
       <nav>
         <ul>
-          <li><Link href={'/'}>Home</Link></li>
+          <li className={style.active}><Link href={'/'}>Home</Link></li>
           <li><Link href={'/#about'}>About</Link></li>
           <li><Link href={'/#portfolio'}>Porfolio</Link></li>
-          <li><Link href={'/#contact'}>Contact</Link></li>
           <li><Link href={'/#blog'}>Blog</Link></li>
+          <li><Link href={'/#contact'}>Contact</Link></li>
         </ul>
         <ul>
-          <li>I am <b>open to</b> offers</li>
+          <span>I am <b>open to</b> offers</span>
         </ul>
       </nav>
     </header>

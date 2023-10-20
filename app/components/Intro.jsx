@@ -5,7 +5,7 @@ import {FaArrowDown} from 'react-icons/fa6'
 function Intro() {
     return (
         <>
-            <section className={style.intro}>
+            <section className={style.intro} id="home">
                 <div>
                     <h1>Hello.</h1>
                     <h1>I am Chinyere.</h1>

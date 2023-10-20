@@ -5,7 +5,7 @@ import Link from "next/link"
 
 function Contact() {
     return (
-        <section className={style.contact}>
+        <section className={style.contact} id="contact">
             <h1 className="title">Contact me</h1>
             <div className={style.contact_cards}>
                 <ContactCard contact={"Port Harcourt, Nigeria"} icon={<FaLocationPin />} />
@@ -25,7 +25,7 @@ function Contact() {
                     }
                     icon={<FaPhone />}
                 />
-                <ContactCard contact={"phone"} icon={<FaPhone />} />
+                
             </div>
         </section>
     )

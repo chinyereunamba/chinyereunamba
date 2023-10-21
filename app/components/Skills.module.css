@@ -51,12 +51,15 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .skillList{
+        gap: 3rem;
+    }
     .skill > div {
         width: 100px;
         height: 100px;
     }
 
     .skill > div i {
-        font-size: var(--font-size-n);
+        font-size: var(--font-size-nt);
     }
 }

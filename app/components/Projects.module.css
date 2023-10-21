@@ -14,7 +14,7 @@
 
 .project .img {
     max-width: 600px;
-    max-height: 550px;
+    max-height: 490px;
     width: 100%;
 }
 
@@ -56,7 +56,6 @@
     }
     
     .project .description{
-        border: 2px solid white;
         max-width: 600px;
         width: 100%;
     }

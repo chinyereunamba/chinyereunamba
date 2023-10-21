@@ -2,6 +2,7 @@
     display: grid;
     place-items: center;
     height: calc(100vh - 200px);
+    position: relative;
 }
 
 .intro h1 {
@@ -10,7 +11,7 @@
     mix-blend-mode: screen;
     cursor: pointer;
 }
-
+    
 .down {
     color: white;
     position: relative;
@@ -31,14 +32,13 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .intro h1 {
-        font-size: var(--font-size-ls);
+        text-align: center;
     }
 }
-
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 768px) {
     .intro h1 {
-        font-size: var(--font-size-l);
+        font-size: 20vw;
     }
 }

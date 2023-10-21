@@ -15,33 +15,50 @@
 .card {
     position: relative;
     width: 310px;
-    height: 130px;
+    height: 170px;
     background: var(--accent-bg);
-    border-radius: 30px;
+    border-radius: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: var(--font-size-n);
     margin-bottom: 1rem;
     cursor: pointer;
     transition: 0.5s;
 }
 
-.card:hover {
-    transform: translateY(-1rem);
-}
 
 .card .icon {
     position: absolute;
-    width: 70px;
-    height: 70px;
+    width: 75px;
+    height: 75px;
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: var(--font-size-nt);
+    font-size: var(--font-size-n);
+    color: var(--title-color);
+    background: var(--accent-bg);
     border-radius: 50%;
-    background: var(--primary-color);
+    border: 2px solid var(--background-color);
+}
+
+.card p{
+    font-size: var(--font-size-n);
+    margin-bottom: 15px;
+    font-weight: 300;
+    color: var(--secondary-color);
+}
+
+.card .social{
+    display: flex;
+    gap: 0.6rem;
+    font-size: var(--font-size-n);
+}
+
+.card .contact_info{
+    font-size: var(--font-size-n);
+    color: var(--title-color);
 }

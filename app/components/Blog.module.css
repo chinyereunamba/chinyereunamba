@@ -57,6 +57,8 @@
     padding: 10px 20px;
     border-radius: 30px;
     font-size: var(--font-size-s);
+    font-weight: 600;
+    color: var(--title-color);
     text-transform: uppercase;
     background: var(--primary-color);
 }

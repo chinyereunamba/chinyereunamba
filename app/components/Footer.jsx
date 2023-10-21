@@ -1,7 +1,7 @@
 import React from "react"
 import style from "./Footer.module.css"
 import Link from "next/link"
-import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa6"
+import { FaTwitter, FaGithub, FaLinkedinIn } from "react-icons/fa6"
 
 function Footer() {
     return (
@@ -23,7 +23,7 @@ function Footer() {
                     href={"https://linkedin.com/chinyereunamba"}
                     target="_blank"
                 >
-                    <FaLinkedin />
+                    <FaLinkedinIn />
                 </Link>
             </div>
             <div>

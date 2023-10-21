@@ -13,11 +13,12 @@
     gap: 2rem;
     align-items: center;
     font-size: var(--font-size-n);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .header nav b {
     color: var(--secondary-color);
+    cursor: pointer;
 }
 
 .header li,
@@ -25,7 +26,7 @@
     position: relative;
 }
 
-.active a {
+.active a, .header li:hover a{
     color: var(--secondary-color);
 }
 

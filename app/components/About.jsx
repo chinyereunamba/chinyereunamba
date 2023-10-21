@@ -10,7 +10,7 @@ function About() {
                 <img src="img.jpg" alt="" />
             </div>
             <div>
-                <h1 className={style.name}>Chinyere Unamba</h1>
+                <h1 className={style.name}> <b>Chinyere</b> Unamba</h1>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Incidunt praesentium suscipit blanditiis temporibus quidem a

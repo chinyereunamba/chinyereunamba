@@ -8,13 +8,13 @@ function Header() {
       <nav>
         <ul>
           <li className={style.active}><Link href={'/'}>Home</Link></li>
-          <li><Link href={'/#about'}>About</Link></li>
-          <li><Link href={'/#portfolio'}>Porfolio</Link></li>
-          <li><Link href={'/#blog'}>Blog</Link></li>
-          <li><Link href={'/#contact'}>Contact</Link></li>
+          <li><Link href={''}>About</Link></li>
+          <li><Link href={''}>Porfolio</Link></li>
+          <li><Link href={''}>Blog</Link></li>
+          <li><Link href={''}>Contact</Link></li>
         </ul>
         <ul>
-          <span>I am <b>open to</b> offers</span>
+          <span>I am <b>open to</b> offers.</span>
         </ul>
       </nav>
         <div className={style.burger}>

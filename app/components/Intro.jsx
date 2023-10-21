@@ -1,6 +1,7 @@
 import React from "react"
 import style from "./Intro.module.css"
-import {FaArrowDown} from 'react-icons/fa6'
+import { FaArrowDown } from "react-icons/fa6"
+import motion from 'framer-motion'
 
 function Intro() {
     return (

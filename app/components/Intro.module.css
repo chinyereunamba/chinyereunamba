@@ -32,6 +32,12 @@
     cursor: pointer;
 }
 
+.down button span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (max-width: 1024px) {
     .intro h1 {
         text-align: center;

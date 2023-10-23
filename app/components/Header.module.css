@@ -1,126 +1,131 @@
 .header {
-    padding: var(--padding);
+  padding: var(--padding);
 }
 
 .header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header nav ul {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    font-size: var(--font-size-n);
-    font-weight: 400;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  font-size: var(--font-size-n);
+  font-weight: 400;
 }
 
 .header nav b {
-    color: var(--secondary-color);
-    cursor: pointer;
+  color: var(--secondary-color);
+  cursor: pointer;
 }
 
 .header li,
 .active {
-    position: relative;
+  position: relative;
 }
 
-.active a, .header li:hover a{
-    color: var(--secondary-color);
+.active a,
+.header li:hover a {
+  color: var(--secondary-color);
 }
 
 .header li:hover::after,
 .active::after {
-    content: "";
-    position: absolute;
-    bottom: -1.1rem;
-    left: 0;
-    height: 0.4rem;
-    width: 0%;
-    border-radius: 0 30px 10px 0;
-    background: var(--primary-color);
-    animation: swipe 0.5s ease 1 forwards;
+  content: "";
+  position: absolute;
+  bottom: -1.1rem;
+  left: 0;
+  height: 0.4rem;
+  width: 0%;
+  border-radius: 0 30px 10px 0;
+  background: var(--primary-color);
+  animation: swipe 0.5s ease 1 forwards;
 }
 
 .burger {
-    display: none;
-    flex-direction: column;
-    gap: 0.7rem;
-    cursor: pointer;
+  display: none;
+  flex-direction: column;
+  gap: 0.7rem;
+  cursor: pointer;
 }
 
 .burger div {
-    height: 3px;
-    border-radius: 20px;
-    width: 30px;
-    background: var(--secondary-color);
+  height: 3px;
+  border-radius: 20px;
+  width: 30px;
+  background: var(--secondary-color);
 }
 
 @keyframes swipe {
-    0% {
-        width: 0;
-    }
+  0% {
+    width: 0;
+  }
 
-    100% {
-        width: 100%;
-    }
+  100% {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .header {
-        height: 85px;
-        padding: 0;
-        position: relative;
-        user-select: none;
-    }
-    .burger {
-        display: flex;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translate(-50%, -50%);
-        z-index: 11111;
-    }
+  .header {
+    height: 85px;
+    padding: 0;
+    position: relative;
+    user-select: none;
+  }
+  .burger {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    z-index: 11111;
+  }
 
-    .header nav {
-        position: absolute;
-        align-items: flex-start;
-        flex-direction: column;
-        justify-content: flex-start;
-        height: 100vh;
-        width: 100%;
-        left: -100%;
-        background: var(--accent-bg);
-        z-index: 1111;
-        padding-block: 30px;
-    }
+  .header nav {
+    position: absolute;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    background: var(--accent-bg);
+    z-index: 1111;
+    padding-block: 30px;
+  }
 
-    .header nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-        width: 100%;
-    }
+  .header.open nav{
+    left: 0;
+  }
 
-    .header li {
-        border-bottom: 1px solid var(--secondary-color-faint);
-        padding-inline: 30px;
-        padding-bottom: 1.5rem;
-        width: 100%;
-    }
+  .header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+  }
 
-    .header li:last-child {
-        padding-bottom: 0;
-        border-bottom: none;
-    }
+  .header li {
+    border-bottom: 1px solid var(--secondary-color-faint);
+    padding-inline: 30px;
+    padding-bottom: 1.5rem;
+    width: 100%;
+  }
 
-    .header nav ul span {
-        display: none;
-    }
+  .header li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
 
-    .header li:hover::after,
-    .active::after {
-        display: none;
-    }
+  .header nav ul span {
+    display: none;
+  }
+
+  .header li:hover::after,
+  .active::after {
+    display: none;
+  }
 }

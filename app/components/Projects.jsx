@@ -13,11 +13,11 @@ function Projects() {
                     stack={["Django", "HTML", "CSS"]}
                     key={0}
                 />
-                <Project
+                <Project key={1}
                     name={"Ecommerce"}
                     link={"github.com"}
                     stack={["Django", "HTML", "CSS"]}
-                    key={0}
+                  
                 />
             </div>
         </section>

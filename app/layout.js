@@ -1,11 +1,8 @@
 import "./globals.css"
-// import { Signika_Negative } from "next/font/google"
-
-// const signika = Signika_Negative({ subsets: ["latin"] })
 
 export const metadata = {
-    title: "Chinyere Unamba",
-    description: "Personal Portfolio",
+  title: "Chinyere Unamba",
+  description: "Personal Portfolio",
 }
 
 export default function RootLayout({ children }) {
@@ -13,9 +10,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-        ></link>
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+        />
       </head>
       <body>{children}</body>
     </html>

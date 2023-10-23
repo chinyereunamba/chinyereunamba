@@ -8,11 +8,11 @@ function About() {
     <section className={style.about} id="about">
       <motion.h1
         className="title"
-        initial={{ translateY: "200%", opacity: 0 }}
+        initial={{ y: "75%", opacity: 0 }}
         whileInView={{
-          translateY: 0,
+          y: 0,
           opacity: [0.25, 1],
-          transition: { duration: 0.8, type: "spring", ease: "easeIn"},
+          transition: { duration: 0.8, ease: "easeIn"},
         }}
       >
         About me

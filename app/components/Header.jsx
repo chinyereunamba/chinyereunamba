@@ -6,12 +6,34 @@ import { motion } from "framer-motion"
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const variants = {
-    open: { opacity: 1, x: "100%" },
-    closed: { opacity: 0, x: "0" },
-    initial: { opacity: 0, y: "-100%" },
-    animate: { y: 0, opacity: 1, transition: { duration: 1 } },
+  const className = isOpen ? style.open : ""
+  function clickLink() {
+    if (isOpen) {
+      setIsOpen(false)
+    }
   }
+  const links = [
+    {
+      name: "Home",
+      link: "/",
+    },
+    {
+      name: "About",
+      link: "/#about",
+    },
+    {
+      name: "Portfolio",
+      link: "/",
+    },
+    {
+      name: "Blog",
+      link: "/",
+    },
+    {
+      name: "Contact",
+      link: "/",
+    },
+  ]
 
   return (
     <motion.header
@@ -19,27 +41,17 @@ function Header() {
       animate={{
         y: 0,
         opacity: [0, 0.25, 1],
-        transition: { duration: 1, type: 'spring' },
+        transition: { duration: 1, type: "spring" },
       }}
-      className={style.header}
+      className={`${style.header} ${className}`}
     >
       <nav>
         <ul>
-          <li className={style.active}>
-            <Link href={"/"}>Home</Link>
-          </li>
-          <li>
-            <Link href={""}>About</Link>
-          </li>
-          <li>
-            <Link href={""}>Porfolio</Link>
-          </li>
-          <li>
-            <Link href={""}>Blog</Link>
-          </li>
-          <li>
-            <Link href={""}>Contact</Link>
-          </li>
+          {links.map((el, index) => (
+            <li key={index} onClick={clickLink}>
+              <Link href={el.link}>{el.name}</Link>
+            </li>
+          ))}
         </ul>
         <ul>
           <span>

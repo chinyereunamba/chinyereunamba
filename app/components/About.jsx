@@ -9,10 +9,11 @@ function About() {
       <motion.h1
         className="title"
         initial={{ y: "75%", opacity: 0 }}
+        viewport={{ once: true }}
         whileInView={{
           y: 0,
           opacity: [0.25, 1],
-          transition: { duration: 0.8, ease: "easeIn"},
+          transition: { duration: 0.8, ease: "easeIn" },
         }}
       >
         About me
@@ -21,20 +22,22 @@ function About() {
         <motion.div
           className={style.img}
           initial={{ translateX: "-50%", opacity: 0 }}
+          viewport={{ once: true }}
           whileInView={{
             translateX: 0,
             opacity: [0, 0.25, 1],
-            transition: { duration: 1, delay:1 },
+            transition: { duration: 1, delay: 1 },
           }}
         >
           <img src="img.jpg" alt="" />
         </motion.div>
         <motion.div
           initial={{ translateX: "50%", opacity: 0 }}
+          viewport={{ once: true }}
           whileInView={{
             translateX: 0,
-            opacity: [0,0.25, 1],
-            transition: { duration: 1, delay:1 },
+            opacity: [0, 0.25, 1],
+            transition: { duration: 1, delay: 1 },
           }}
         >
           <h1 className={style.name}>

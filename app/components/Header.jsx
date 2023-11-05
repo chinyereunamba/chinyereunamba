@@ -38,6 +38,7 @@ function Header() {
   return (
     <motion.header
       initial={{ y: "-25%", opacity: 0 }}
+      viewport={{once: true}}
       animate={{
         y: 0,
         opacity: [0, 0.25, 1],

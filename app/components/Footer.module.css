@@ -9,13 +9,13 @@
 .social{
     display: flex;
     gap: 0.8rem;
-    font-size: var(--font-size-nt);
+    font-size: var(--font-size-n);
 }
 
 .social a{
     transition: 0.5s;
     transform-origin: bottom;
-    animation: hover 0.5s ease 1 forwards;
+    /* animation: hover 0.5s ease 1 forwards; */
 }
 
 @keyframes hover {

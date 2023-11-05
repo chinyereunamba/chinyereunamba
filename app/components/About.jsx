@@ -1,7 +1,7 @@
 "use client"
 import React from "react"
 import style from "./About.module.css"
-import {motion } from "framer-motion"
+import { motion } from "framer-motion"
 
 function About() {
   return (
@@ -29,9 +29,10 @@ function About() {
             transition: { duration: 1, delay: 1 },
           }}
         >
-          <img src="img.jpg" alt="" />
+          <img src="img.jpg" alt="Chinyere Unamba" />
         </motion.div>
         <motion.div
+          className={style.about_des}
           initial={{ translateX: "50%", opacity: 0 }}
           viewport={{ once: true }}
           whileInView={{
@@ -49,10 +50,24 @@ function About() {
             <span>Tech Enthusiast</span>{" "}
           </h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
-            praesentium suscipit blanditiis temporibus quidem a esse magni
-            soluta, ducimus quisquam eius assumenda provident quia perspiciatis
-            modi ea? Veniam, ab dolor?
+            I am an aspiring full-stack developer with over{" "}
+            <strong style={{ color: "var(--secondary-color)" }}>3 years</strong>{" "}
+            of hands-on experience in web development technologies. I have
+            practical experience with{" "}
+            <strong style={{ color: "var(--secondary-color)" }}>
+              HTML/CSS
+            </strong>
+            ,{" "}
+            <strong style={{ color: "var(--secondary-color)" }}>Python</strong>,{" "}
+            <strong style={{ color: "var(--secondary-color)" }}>Django</strong>,{" "}
+              <strong style={{ color: "var(--secondary-color)" }}>Django Rest Framework</strong>,{" "}
+              <strong style={{ color: "var(--secondary-color)" }}>
+              React.js
+            </strong>
+            , and {" "}
+            <strong style={{ color: "var(--secondary-color)" }}>Next.js</strong>
+            . I am deeply passionate about expanding my skills further and
+            exploring innovative projects.
           </p>
         </motion.div>
       </div>

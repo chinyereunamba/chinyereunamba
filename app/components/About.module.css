@@ -32,6 +32,11 @@
     border-radius: 30px;
 }
 
+.about .about_des{
+    max-width: 650px;
+    width: 100%;
+}
+
 .about p {
     line-height: 1.7;
     font-size: var(--font-size-n);
@@ -77,8 +82,7 @@
         justify-content: center;
     }
 
-    .about h1,
-    .about p {
+    .about h1{
         text-align: center;
     }
 

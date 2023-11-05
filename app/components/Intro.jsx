@@ -44,7 +44,7 @@ function Intro() {
               ease: "easeIn",
             }}
             initial={{ opacity: [1], translateY: ["-70%"] }}
-            animate={{ translateY: ["0%", "70%"], opacity: [1, 0] }}
+            animate={{ translateY: ["0%", "60%"], opacity: [1, 0] }}
           >
             <FaArrowDown />
           </motion.span>

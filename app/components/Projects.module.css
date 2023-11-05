@@ -16,10 +16,12 @@
 .project .img {
     max-width: 600px;
     max-height: 490px;
+    overflow: hidden;
     width: 100%;
 }
 
-.project .img img {
+.project .img iframe {
+    aspect-ratio: 16 / 9;
     width: 100%;
     height: 100%;
     border-radius: 30px;
@@ -69,14 +71,6 @@
     font-size: var(--font-size-n);
 }
 
-.project_link .preview{
-    transform: rotate(35deg);
-    transition: 0.5s;
-}
-
-.project_link .preview:hover{
-    transform: translate(4px, -4px) rotate(35deg);
-}
 
 @media screen and (max-width: 1024px) {
     .project {

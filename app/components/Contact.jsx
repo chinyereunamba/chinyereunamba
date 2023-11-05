@@ -12,7 +12,7 @@ function Contact() {
             <div className={style.contact_cards}>
                 <ContactCard
                     contact={
-                        <Link href={"mailto:chinyereunamba17@gmail.com"}>
+                        <Link href={"mailto:cunamba2@gmail.com"}>
                             cunamba2@gmail.com
                         </Link>
                     }

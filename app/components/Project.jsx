@@ -1,12 +1,17 @@
 import React from "react"
 import style from "./Projects.module.css"
 import Link from "next/link"
-import { FaArrowUpLong, FaGithub } from "react-icons/fa6"
+import { FaGithub } from "react-icons/fa6"
+import { GoLinkExternal } from "react-icons/go"
 function Project({ name, stack = [], git, link }) {
   return (
     <div className={style.project}>
       <div className={style.img}>
-        <img src="case-1.webp" alt="case-1" />
+        <iframe
+          src={link}
+          height="100%"
+          allowfullscreen
+        ></iframe>
       </div>
       <div className={style.description}>
         <p className={style.project_title}>{name}</p>
@@ -24,11 +29,11 @@ function Project({ name, stack = [], git, link }) {
             ))}
           </span>
           <span className={style.project_link}>
-            <Link href={'/'}>
+            <Link href={"/"}>
               <FaGithub />
             </Link>
-            <Link className={style.preview} href={'/'}>
-              <FaArrowUpLong />
+            <Link className={style.preview} href={"/"}>
+              <GoLinkExternal />
             </Link>
           </span>
         </div>

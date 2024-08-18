@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Signika_Negative } from "next/font/google";
 import "./globals.css";
 import { SessionProvider } from "@/store/context";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const signika = Signika_Negative({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Chinyere Unamba",
@@ -19,10 +22,10 @@ export default function RootLayout({
   return (
     <SessionProvider>
       <html lang="en">
-        <body className={inter.className}>
+        <body className={signika.className}>
           <Header />
           {children}
-          <Footer  />
+          <Footer />
         </body>
       </html>
     </SessionProvider>

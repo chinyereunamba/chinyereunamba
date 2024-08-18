@@ -9,12 +9,7 @@ const signika = Signika_Negative({
   weight: ["400", "600", "700"],
   variable: "--font-signika",
 });
-const fira = Fira_Sans_Condensed({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  display: "swap",
-  variable: "--font-fira",
-});
+
 
 export const metadata: Metadata = {
   title: "Chinyere Unamba",
@@ -27,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <SessionProvider>
-      <html lang="en" className={`${fira.variable} ${signika.variable}`}>
+      <html lang="en" className={signika.variable}>
         <body>
           {children}
           <Footer />

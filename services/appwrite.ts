@@ -48,7 +48,7 @@ const fileUrl = async (name: string) => {
   const fileId = response.files.find((file) =>
     file.name.startsWith(`${name}-1`)
   );
-  const fileUrl = storage.getFileView("66af89df003b0904eb5d", fileId?.$id);
+  const fileUrl = storage.getFileView("66af89df003b0904eb5d", fileId!.$id);
   return fileUrl.href;
 };
 

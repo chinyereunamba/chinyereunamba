@@ -7,7 +7,7 @@ async function Projects() {
   const projects = await getProject();
 
   const image = await Promise.all(
-    projects.map(async (item) => {
+    projects!.map(async (item) => {
       return {
         name: item.slug,
         imageUrl: await fileUrl(item.slug),
@@ -19,7 +19,7 @@ async function Projects() {
     <section className={style.projects} id="portfolio">
       <h1 className="title">My Projects</h1>
       <div className={style.project_list}>
-        {projects.map((project, index) => {
+        {projects?.map((project, index) => {
           return (
             <Project
               key={index}

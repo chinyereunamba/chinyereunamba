@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const project = await getProject();
-  const data = project.find((item) => item.slug == params.slug);
+  const data = project?.find((item) => item.slug == params.slug);
   const imgs = (await fileUrlList(data?.slug as string)).reverse();
   const Img = ({ img }: { img: string }) => (
     <Image src={img} height={1000} width={1300} alt="project-img" />

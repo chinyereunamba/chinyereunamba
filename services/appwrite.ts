@@ -20,7 +20,7 @@ const client = new Client()
 const account = new Account(client);
 const db = new Databases(client);
 
-export async function getProject(): Promise<ProjectProps[]> {
+export async function getProject(){
   try {
     const response = await db
       .listDocuments("66af89b3003a38737642", "66af89c50009616d90a8", [

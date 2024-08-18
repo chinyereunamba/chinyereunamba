@@ -1,0 +1,64 @@
+.contact {
+    max-width: 1300px;
+    width: 100%;
+    margin: 5rem auto;
+}
+
+.contact_cards {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 310px;
+    height: 170px;
+    background: var(--accent-bg);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+.card .icon {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size-n);
+    color: var(--title-color);
+    background: var(--accent-bg);
+    border-radius: 50%;
+    border: 2px solid var(--background-color);
+}
+
+.card p{
+    font-size: var(--font-size-n);
+    margin-bottom: 15px;
+    font-weight: 300;
+    color: var(--secondary-color);
+}
+
+.card .social{
+    display: flex;
+    gap: 0.6rem;
+    font-size: var(--font-size-n);
+}
+
+.card .contact_info{
+    font-size: var(--font-size-n);
+    color: var(--title-color);
+}

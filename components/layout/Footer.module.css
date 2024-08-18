@@ -1,0 +1,43 @@
+.footer{
+    min-height: 150px;
+    border-radius: 100% 100% 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.social{
+    display: flex;
+    gap: 0.8rem;
+    font-size: var(--font-size-n);
+}
+
+.social a{
+    transition: 0.5s;
+    transform-origin: bottom;
+    /* animation: hover 0.5s ease 1 forwards; */
+}
+
+@keyframes hover {
+    0%{
+        
+    }
+}
+
+.footer p{
+    font-size: 18px;
+}
+
+.footer b{
+color: var(--secondary-color);
+    font-weight: 700;
+}
+
+@media screen and (max-width: 426px) {
+    .footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+}

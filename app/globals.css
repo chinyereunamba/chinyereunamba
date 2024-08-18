@@ -2,28 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap");
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-color: #0f0f0f;
+  --primary-color: #3868e3;
+  --secondary-color: #0ea5e9;
+  --secondary-color-faint: #0ea5e94a;
+  --accent-bg: #171717;
+  --underline: #007bff;
+  --text-color: #d4d4d4;
+  --border-color: #e5e7eb;
+  --title-color: #ffffff;
+  --box-shadow: 10px 0 60px 4px #162859;
+  --icon-color-inactive: #a3a3a3;
+  --warning-info: #ffa500;
+  --font-size-s: 16px;
+  --font-size-n: 20px;
+  --font-size-nt: 26px;
+  --font-size-ms: 45px;
+  --font-size-m: 60px;
+  --font-size-l: 70px;
+  --font-size-ls: 110px;
+  --font-size-xl: 150px;
+  --padding: 30px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "Signika Negative", sans-serif;
+}
+
+*::selection {
+  background: var(--primary-color);
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+section {
+  padding: var(--padding);
+}
+
+p {
+  font-size: var(--font-size-n);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.title {
+  position: relative;
+  font-size: var(--font-size-m);
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: var(--font-size-ms);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
 }
 
 @layer utilities {

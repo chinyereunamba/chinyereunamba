@@ -1,0 +1,51 @@
+.intro {
+    display: grid;
+    place-items: center;
+    height: calc(100vh - 200px);
+    position: relative;
+}
+
+.intro h1 {
+    font-size: var(--font-size-xl);
+    text-shadow: 5px 5px 0px var(--primary-color);
+    mix-blend-mode: screen;
+    cursor: pointer;
+}
+    
+.down {
+    color: white;
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 110px;
+}
+
+.down button {
+    height: 60px;
+    width: 60px;
+    background: var(--primary-color);
+    font-size: calc(var(--font-size-n) + 0.5rem);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+.down button span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .intro h1 {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    .intro h1 {
+        font-size: 20vw;
+        text-shadow: 4px 4px 0px var(--primary-color);
+    }
+}

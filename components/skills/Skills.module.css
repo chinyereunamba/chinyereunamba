@@ -1,0 +1,63 @@
+.skills {
+    margin: 5rem auto;
+    max-width: 1300px;
+}
+.skillList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.skill:hover {
+    transform: translateY(-1.2rem);
+}
+
+.skill:hover, .skill:hover svg{
+    color: var(--secondary-color);
+}
+
+.skill > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    background: var(--accent-bg);
+    transform: rotate(45deg);
+    border-radius: 30px;
+}
+
+.skill > div svg {
+    transform: rotate(-45deg);
+    color: var(--text-color);
+    transition: 0.5s;
+}
+
+.skill span {
+    font-weight: 600;
+    font-size: var(--font-size-n);
+}
+
+@media screen and (max-width: 1024px) {
+    .skillList{
+        gap: 3rem;
+    }
+    .skill > div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .skill > div svg {
+        font-size: var(--font-size-nt);
+    }
+}

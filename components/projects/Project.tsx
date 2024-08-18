@@ -11,17 +11,19 @@ type ProjectProps = {
   stack: string[];
   git: string;
   link: string;
-  img: string
+  img: string;
 };
 
 function Project({ intro, name, stack = [], git, link, img }: ProjectProps) {
   return (
     <div className={style.project}>
       <div className={style.img}>
-        <Image src={img} height={500} width={500} alt={ name } />
+        <Image src={img} height={500} width={500} alt={name} />
       </div>
       <div className={style.description}>
-        <p className={style.project_title}>{name}</p>
+        <p className={style.project_title}>
+          <Link href={`/projects/${link}`}>{name}</Link>
+        </p>
         <p>{intro}</p>
         <div className={style.link}>
           <span>
@@ -36,7 +38,11 @@ function Project({ intro, name, stack = [], git, link, img }: ProjectProps) {
             <Link href={git} target="_blank">
               <FaGithub />
             </Link>
-            <Link className={style.preview} href={`/projects/${link}`} target="_blank">
+            <Link
+              className={style.preview}
+              href={`/projects/${link}`}
+              target="_blank"
+            >
               <GoLinkExternal />
             </Link>
           </span>

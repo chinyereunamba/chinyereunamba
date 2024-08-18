@@ -1,6 +1,8 @@
 import { fileUrlList, getProject } from "@/services/appwrite";
 import style from "@/components/projects/Projects.module.css";
 import Image from "next/image";
+import { FaArrowLeft } from "react-icons/fa6";
+import BackArrow from "@/components/utils/BackArrow";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const project = await getProject();
@@ -11,13 +13,16 @@ export default async function Page({ params }: { params: { slug: string } }) {
   );
   return (
     <section className={style.project_det}>
-      <h1>{data?.project_name}</h1>
-      <p>{data?.desc}</p>
-      <div className={style.det_img}>
-        {imgs.map((item, id) => (
-          <Img img={item} key={id} />
-        ))}
-      </div>
+      <BackArrow />
+      <section>
+        <h1>{data?.project_name}</h1>
+        <p>{data?.desc}</p>
+        <div className={style.det_img}>
+          {imgs.map((item, id) => (
+            <Img img={item} key={id} />
+          ))}
+        </div>
+      </section>
     </section>
   );
 }

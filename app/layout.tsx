@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
-import { Inter, Signika_Negative } from "next/font/google";
+import { Fira_Sans_Condensed, Signika_Negative } from "next/font/google";
 import "./globals.css";
 import { SessionProvider } from "@/store/context";
-import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 const signika = Signika_Negative({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
+  variable: "--font-signika",
+});
+const fira = Fira_Sans_Condensed({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  display: "swap",
+  variable: "--font-fira",
 });
 
 export const metadata: Metadata = {
@@ -21,9 +27,8 @@ export default function RootLayout({
 }>) {
   return (
     <SessionProvider>
-      <html lang="en">
-        <body className={signika.className}>
-          <Header />
+      <html lang="en" className={`${fira.variable} ${signika.variable}`}>
+        <body>
           {children}
           <Footer />
         </body>

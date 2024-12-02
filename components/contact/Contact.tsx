@@ -55,6 +55,8 @@ function Contact() {
           action={"Follow me"}
         />
       </div>
+      <meta name="twitter:site" content="@chinyere_un" />
+      <meta name="x:site" content="@chinyere_un" />
     </section>
   );
 }

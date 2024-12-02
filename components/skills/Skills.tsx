@@ -50,7 +50,7 @@ function Skills() {
     },
   ];
   return (
-    <section className={style.skills}>
+    <section className={style.skills} id="skills">
       <h1 className="title">My Skills</h1>
       <div className={style.skillList}>
         {skills.map((item, index) => (

@@ -17,7 +17,7 @@ async function Projects() {
 
   return (
     <section className={style.projects} id="portfolio">
-      <h1 className="title">My Projects</h1>
+      <h1 className="title">My Works</h1>
       <div className={style.project_list}>
         {projects?.map((project, index) => {
           return (

@@ -37,10 +37,10 @@
     width: 100%;
 }
 
-.about p {
+.about p, .about summary {
     line-height: 1.7;
     font-size: var(--font-size-n);
-    font-weight: 300;
+    font-weight: 400;
     margin-top: 20px;
 }
 

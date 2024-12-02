@@ -9,7 +9,7 @@ type ProjectProps = {
   intro: string;
   name: string;
   stack: string[];
-  git: string;
+  git?: string;
   link: string;
   img: string;
 };
@@ -35,9 +35,12 @@ function Project({ intro, name, stack = [], git, link, img }: ProjectProps) {
             ))}
           </span>
           <span className={style.project_link}>
-            <Link href={git} target="_blank">
-              <FaGithub />
-            </Link>
+            {git && (
+              <Link href={git} target="_blank">
+                <FaGithub />
+              </Link>
+            )}
+
             <Link
               className={style.preview}
               href={`/projects/${link}`}

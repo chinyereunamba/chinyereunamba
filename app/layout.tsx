@@ -14,6 +14,7 @@ const signika = Signika_Negative({
 export const metadata: Metadata = {
   title: "Chinyere Unamba",
   description: "Personal Portfolio",
+  keywords: "chinyere, unamba, nextjs developer, chinyere_un, web developer,"
 };
 export default function RootLayout({
   children,

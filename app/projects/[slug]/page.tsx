@@ -3,6 +3,8 @@ import style from "@/components/projects/Projects.module.css";
 import Image from "next/image";
 import { FaArrowLeft } from "react-icons/fa6";
 import BackArrow from "@/components/utils/BackArrow";
+import Link from "next/link";
+import { Button } from "@/components/utils/Button";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const project = await getProject();
@@ -17,6 +19,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
       <section>
         <h1>{data?.project_name}</h1>
         <p>{data?.desc}</p>
+        {data?.$collectionId && (
+          <Button className="text-s mt-4">
+            <Link href={"https://mediaplur.com"} target="_blank">
+              View Site
+            </Link>
+          </Button>
+        )}
         <div className={style.det_img}>
           {imgs.map((item, id) => (
             <Img img={item} key={id} />

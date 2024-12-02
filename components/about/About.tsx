@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import style from "./About.module.css";
+import Image from "next/image";
 
 function About() {
   return (
@@ -8,18 +9,17 @@ function About() {
       <h1 className="title">About me</h1>
       <div>
         <div className={style.img}>
-          <img src="img.jpg" alt="Chinyere Unamba" />
+          <Image width={500} height={600} src="/img.jpg" alt="Chinyere Unamba" />
         </div>
         <div className={style.about_des}>
           <h1 className={style.name}>
-            {" "}
             <b>Chinyere</b> Unamba
           </h1>
           <h3>
             <span>Full Stack Developer</span> <span>Freelancer</span>{" "}
             <span>Tech Enthusiast</span>{" "}
           </h3>
-          <p>
+          <summary>
             I am an aspiring full-stack developer with over{" "}
             <strong style={{ color: "var(--secondary-color)" }}>4 years</strong>{" "}
             of hands-on experience in web development technologies. I have
@@ -41,7 +41,7 @@ function About() {
             <strong style={{ color: "var(--secondary-color)" }}>Next.js</strong>
             . I am deeply passionate about expanding my skills further and
             exploring innovative projects.
-          </p>
+          </summary>
         </div>
       </div>
     </section>

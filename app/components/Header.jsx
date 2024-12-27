@@ -23,7 +23,7 @@ function Header() {
     },
     {
       name: "Portfolio",
-      link: "/",
+      link: "/#portfolio",
     },
     {
       name: "Blog",
@@ -33,7 +33,7 @@ function Header() {
       name: "Contact",
       link: "/",
     },
-  ]
+  ];
 
   return (
     <motion.header

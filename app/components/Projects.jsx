@@ -6,23 +6,23 @@ function Projects() {
   const projects = [
     {
       name: "Form Validation",
-      link: "https://form-verification.netlify.app/",
+      link: "/projects/form/project",
       git: "https://github.com/chinyereunamba/form-validation/",
       stack: [],
     },
     {
       name: "AI Quiz",
-      link: "https://quiz-app-eta-roan.vercel.app/",
+      link: "/projects/ai/project",
       git: "https://github.com/chinyereunamba/quiz",
       stack: [],
     },
     {
       name: "Ecommerce",
-      link: "https://github.com",
+      link: "/projects/ecommerce/project",
       git: "https://github.com",
       stack: [],
     },
-  ]
+  ];
   return (
     <section className={style.projects} id="portfolio">
       <h1 className="title">My Projects</h1>

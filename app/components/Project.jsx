@@ -7,11 +7,11 @@ function Project({ name, stack = [], git, link }) {
   return (
     <div className={style.project}>
       <div className={style.img}>
-        <iframe
+        {/* <iframe
           src={link}
           height="100%"
           allowfullscreen
-        ></iframe>
+        ></iframe> */}
       </div>
       <div className={style.description}>
         <p className={style.project_title}>{name}</p>

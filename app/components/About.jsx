@@ -2,6 +2,7 @@
 import React from "react"
 import style from "./About.module.css"
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 function About() {
   return (
@@ -29,7 +30,7 @@ function About() {
             transition: { duration: 1, delay: 1 },
           }}
         >
-          <img src="img.jpg" alt="Chinyere Unamba" />
+          <Image width={600} height={800} src="img.jpg" alt="Chinyere Unamba" />
         </motion.div>
         <motion.div
           className={style.about_des}

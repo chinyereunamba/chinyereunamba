@@ -1,19 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Project from "./Project";
 import style from "./Projects.module.css";
-import { fileUrl, getProject } from "@/services/appwrite";
+import { sanityFetch } from "@/sanity/lib/fetch";
+import { projectsQuery } from "@/sanity/lib/queries";
+import { SanityDocument } from "next-sanity";
 
 async function Projects() {
-  const projects = await getProject();
-
-  const image = await Promise.all(
-    projects!.map(async (item) => {
-      return {
-        name: item.slug,
-        imageUrl: await fileUrl(item.slug),
-      };
-    })
-  );
+  const projects = await sanityFetch<SanityDocument[]>({
+    query: projectsQuery,
+  });
 
   return (
     <section className={style.projects} id="portfolio">
@@ -23,12 +18,13 @@ async function Projects() {
           return (
             <Project
               key={index}
-              intro={project?.desc}
-              name={project?.project_name}
-              git={project?.git_link || ""}
-              link={project?.slug || ""}
-              stack={project?.stack}
-              img={image.find(item=>item.name==project.slug)?.imageUrl || ""}
+              intro={project.description ?? ""}
+              name={project.title ?? ""}
+              git={project.github ?? ""}
+              link={project.slug?.current ?? ""}
+              stack={project?.tags ?? []}
+              img={project.mainImage?.asset?.url ?? ""}
+              alt={project.mainImage?.alt ?? project.title}
             />
           );
         })}

@@ -39,7 +39,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         
-        <!-- Google tag (gtag.js) -->
+        
+
+        <body>
+          <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PS33P3NKKZ"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
@@ -48,8 +51,6 @@ export default function RootLayout({
         
           gtag('config', 'G-PS33P3NKKZ');
         </script>
-
-        <body>
           {children}
           <Footer />
         </body>

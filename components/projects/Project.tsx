@@ -43,7 +43,7 @@ function Project({
 
       {/* </div> */}
       <div className={style.description}>
-        <p className={style.project_title}>
+        <p className={`${style.project_title} nt`}>
           <Link href={`/projects/${link}`}>{name}</Link>
         </p>
         <p>{intro}</p>

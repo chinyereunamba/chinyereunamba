@@ -15,11 +15,11 @@ function About() {
           <h1 className={style.name}>
             <b>Chinyere</b> Unamba
           </h1>
-          <h3>
+          {/* <h3>
             <span>Full Stack Developer</span> <span>Freelancer</span>{" "}
             <span>Tech Enthusiast</span>{" "}
-          </h3>
-          <summary>
+          </h3> */}
+          <summary className="text-nt font-normal">
             I am an aspiring full-stack developer with over{" "}
             <strong style={{ color: "var(--secondary-color)" }}>4 years</strong>{" "}
             of hands-on experience in web development technologies. I have

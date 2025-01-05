@@ -19,7 +19,7 @@ function Footer() {
       </div>
       <div>
         <p>
-          &copy; 2024. <b>Chinyere Unamba</b>
+          &copy; 2025. <b>Chinyere Unamba</b>
         </p>
       </div>
     </section>

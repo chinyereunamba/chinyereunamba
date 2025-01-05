@@ -44,6 +44,10 @@ function Skills() {
       skill: "Django",
       icon: <SiDjango size={40} />,
     },
+    // {
+    //   skill: "REST Framework",
+    //   icon: <Res size={40} />,
+    // },
     {
       skill: "APIs",
       icon: <TbApi size={40} />,

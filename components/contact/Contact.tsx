@@ -10,6 +10,7 @@ import {
 
 import { BiShareAlt, BiMapPin } from "react-icons/bi";
 import Link from "next/link";
+import SpotlightCard from "../utils/Spolight";
 
 function Contact() {
   return (
@@ -63,16 +64,16 @@ function Contact() {
 type ContactCardProps = {
   contact: React.JSX.Element | string;
   icon: React.JSX.Element;
-  action: string;
+  action?: string;
 };
 
 function ContactCard({ contact, icon, action }: ContactCardProps) {
   return (
-    <div className={style.card}>
-      <div className={style.icon}>{icon}</div>
-      <p>{action}</p>
-      <span className={style.contact_info}>{contact}</span>
-    </div>
+      <SpotlightCard className={style.card} spotlightColor="rgba(56, 104, 227, 0.2)">
+        <div className={style.icon}>{icon}</div>
+        <p>{action}</p>
+        <span className={style.contact_info}>{contact}</span>
+      </SpotlightCard>
   );
 }
 

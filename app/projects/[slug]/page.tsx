@@ -5,7 +5,12 @@ import { Button } from "@/components/utils/Button";
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { projectQuery } from "@/sanity/lib/queries";
 import { SanityDocument } from "next-sanity";
-import Image from "next/image"; // Use next/image for optimized images
+import Image from "next/image";
+
+interface Img {
+  alt: string;
+  assert: { url: string };
+}
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const project = await sanityFetch<SanityDocument>(projectQuery, {
@@ -13,14 +18,18 @@ export default async function Page({ params }: { params: { slug: string } }) {
   });
 
   // Fallback for gallery images
-  const imgs = project?.gallery ?? [];
+  const imgs: Img[] = project?.gallery ?? [];
 
   return (
-    <section className={style.project_det}>
+    <section className={`${style.project_det}`}>
       <BackArrow />
-      <section>
-        <h1>{project?.title ?? "Untitled Project"}</h1>
-        <p>{project?.description ?? "No description available."}</p>
+      <div>
+        <article>
+          <h1>{project?.title ?? "Untitled Project"}</h1>
+          <summary>
+            {project?.description ?? "No description available."}
+          </summary>
+        </article>
 
         {project?.link && (
           <Button className="text-s mt-4">
@@ -42,7 +51,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             </div>
           ))}
         </div>
-      </section>
+      </div>
     </section>
   );
 }

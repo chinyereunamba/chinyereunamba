@@ -18,6 +18,7 @@ const config: Config = {
         secondary: "#0ea5e9",
         "secondary-faint": "#0ea5e94a",
         accent: "#171717",
+        
         underline: "#007bff",
         text: "#d4d4d4",
         border: "#e5e7eb",
@@ -41,6 +42,16 @@ const config: Config = {
       },
       boxShadow: {
         custom: "10px 0 60px 4px #162859",
+      },
+      keyframes: {
+        gradient: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
+      },
+      animation: {
+        gradient: "gradient 8s linear infinite",
       },
     },
   },

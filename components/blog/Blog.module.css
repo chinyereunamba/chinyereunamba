@@ -1,5 +1,6 @@
 .blog {
-  max-width: 1300px;
+  @apply max-w-7xl;
+
   margin: 5rem auto;
 }
 .blog .blog_posts {

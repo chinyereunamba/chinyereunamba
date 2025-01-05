@@ -20,21 +20,7 @@ async function Blog() {
         ))}
       </div>
     </section>
-  );
-  return (
-    <section className={style.blog} id="blog">
-      <h1 className="title">Blog</h1>
-      <div className={style.blog_posts}>
-        <BlogPost
-          title={"Getting Started with Python"}
-          intro={
-            "Whether you’re a coding novice, a Python explorer, or just curious, this guide is made for you. In this guide, you’d learn how to install python to your local machine. I would be using the Windows OS."
-          }
-          link="https://medium.com/@chinyereunamba17/getting-started-with-python-80a7263c9fdb"
-        />
-      </div>
-    </section>
-  );
+  ); 
 }
 
 export default Blog;

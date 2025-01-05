@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import { Fira_Sans_Condensed, Signika_Negative } from "next/font/google";
 import "./globals.css";
-import { SessionProvider } from "@/store/context";
 import Footer from "@/components/layout/Footer";
 import Script from "next/script";
+import SplashCursor from '@/components/utils/Splash'
 
 const signika = Signika_Negative({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
-  display:'swap',
+  display: "swap",
   variable: "--font-signika",
 });
 const jsonLd = {
@@ -31,18 +31,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <SessionProvider>
-      <html lang="en" className={signika.className}>
-        <Script
-          id="portfolio-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
+    <html lang="en" className={signika.className}>
+      <Script
+        id="portfolio-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
@@ -50,13 +49,13 @@ export default function RootLayout({
                 page_path: window.location.pathname,
               });
             `,
-          }}
-        />
-        <body className={signika.className}>
-          {children}
-          <Footer />
-        </body>
-      </html>
-    </SessionProvider>
+        }}
+      />
+      <body className={signika.className}>
+        <SplashCursor />
+        {children}
+        <Footer />
+      </body>
+    </html>
   );
 }

@@ -1,11 +1,13 @@
 .header {
   padding: var(--padding);
+  @apply max-w-7xl mx-auto relative;
 }
 
 .header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @apply sticky top-0 z-10;
 }
 
 .header nav ul {
@@ -18,7 +20,6 @@
 
 .header nav b {
   color: var(--secondary-color);
-  cursor: pointer;
 }
 
 .header li,
@@ -105,11 +106,10 @@
     padding-block: 30px;
     transition: 0.3s ease;
   }
-  
+
   .header.open nav {
     left: 0%;
   }
-
 
   .header .burger div {
     transition: 0.5s ease;

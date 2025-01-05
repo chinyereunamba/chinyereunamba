@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FaGithub } from "react-icons/fa6";
 import { GoLinkExternal } from "react-icons/go";
 import Image from "next/image";
+import SpotlightCard from "../utils/Spolight";
 
 type ProjectProps = {
   intro: string;
@@ -25,7 +26,10 @@ function Project({
   alt,
 }: ProjectProps) {
   return (
-    <div className={style.project}>
+    <SpotlightCard
+      spotlightColor="rgba(56, 104, 227, 0.2)"
+      className={style.project}
+    >
       {/* <div className={style.img}> */}
       <div className="mockup-browser bg-base-300 !w-2/3">
         <div className="mockup-browser-toolbar">
@@ -48,10 +52,14 @@ function Project({
         </p>
         <p>{intro}</p>
         <div className={style.link}>
-          <span>
+          <span className="flex-wrap flex-1 flex gap-1">
             <p>Stack: </p>
+
             {stack.map((item, index) => (
-              <small className={style.tag} key={index}>
+              <small
+                className={`${style.tag} bg-transparent text-secondary text-base font-medium`}
+                key={index}
+              >
                 {item}
               </small>
             ))}
@@ -64,12 +72,12 @@ function Project({
             )}
 
             <Link className={style.preview} href={`/projects/${link}`}>
-              <GoLinkExternal />
+              <GoLinkExternal className=" hover:font-bold" />
             </Link>
           </span>
         </div>
       </div>
-    </div>
+    </SpotlightCard>
   );
 }
 

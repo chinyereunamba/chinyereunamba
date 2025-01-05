@@ -1,5 +1,6 @@
-.projects, .project_det {
-  max-width: 1300px;
+.projects,
+.project_det {
+  @apply max-w-7xl;
   margin: 5rem auto;
 }
 .project_list {
@@ -22,19 +23,19 @@
   width: 100%;
 }
 
-.det_img{
-    max-width: 1300px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 20px;
+.det_img {
+  max-width: 1300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 20px;
 }
 
-.det_img img{
-    width: 100;
-    border: 3px solid var(--secondary-color);
-    border-radius: 20px;
+.det_img img {
+  width: 100;
+  border: 3px solid var(--secondary-color);
+  border-radius: 20px;
 }
 
 .project .img img {
@@ -72,15 +73,9 @@
   margin-bottom: 10px;
 }
 
-.description span .tag,
 .description span p {
   font-size: var(--font-size-s);
   font-weight: 600;
-}
-
-.description span .tag {
-  color: var(--secondary-color) ;
-  margin-right: 10px;
 }
 
 .description span.project_link {

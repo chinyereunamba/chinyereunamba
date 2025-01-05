@@ -1,5 +1,6 @@
 .contact {
-    max-width: 1300px;
+     @apply max-w-7xl;
+
     width: 100%;
     margin: 5rem auto;
 }
@@ -29,6 +30,7 @@
 
 
 .card .icon {
+    z-index: 10;
     position: absolute;
     width: 75px;
     height: 75px;
@@ -48,7 +50,7 @@
 .card p{
     font-size: var(--font-size-n);
     margin-bottom: 15px;
-    font-weight: 300;
+    font-weight: 500;
     color: var(--secondary-color);
 }
 

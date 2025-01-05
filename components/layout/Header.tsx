@@ -1,14 +1,15 @@
-"use client"
-import Link from "next/link"
-import React, { useState } from "react"
-import style from "./Header.module.css"
+"use client";
+import Link from "next/link";
+import React, { useState } from "react";
+import style from "./Header.module.css";
+import GradientText from "../utils/GradientText";
 
 function Header() {
-  const [isOpen, setIsOpen] = useState(false)
-  const className = isOpen ? style.open : ""
+  const [isOpen, setIsOpen] = useState(false);
+  const className = isOpen ? style.open : "";
   function clickLink() {
     if (isOpen) {
-      setIsOpen(false)
+      setIsOpen(false);
     }
   }
   const links = [
@@ -26,19 +27,16 @@ function Header() {
     },
     {
       name: "Blog",
-      link: "/",
+      link: "/#blog",
     },
     {
       name: "Contact",
-      link: "/",
+      link: "/#contact",
     },
   ];
 
   return (
-    <header
-      
-      className={`${style.header} ${className}`}
-    >
+    <header className={`${style.header} ${className}`}>
       <nav>
         <ul>
           {links.map((el, index) => (
@@ -48,9 +46,14 @@ function Header() {
           ))}
         </ul>
         <ul>
-          <span>
-            I am <b>open to</b> offers.
-          </span>
+          <GradientText
+            colors={["#40ffaa", "#0ea5e9", "#40ffaa", "#0ea5e9", "#40ffaa"]}
+            animationSpeed={3}
+            showBorder={false}
+            className="custom-class"
+          >
+            I am open to offers.
+          </GradientText>
         </ul>
       </nav>
       <div
@@ -61,7 +64,7 @@ function Header() {
         <div></div>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

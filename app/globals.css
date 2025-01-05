@@ -2,29 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-
-:root {
-  --background-color: #0f0f0f;
-  --primary-color: #3868e3;
-  --secondary-color: #0ea5e9;
-  --secondary-color-faint: #0ea5e94a;
-  --accent-bg: #171717;
-  --underline: #007bff;
-  --text-color: #d4d4d4;
-  --border-color: #e5e7eb;
-  --title-color: #ffffff;
-  --box-shadow: 10px 0 60px 4px #162859;
-  --icon-color-inactive: #a3a3a3;
-  --warning-info: #ffa500;
-  --font-size-s: 16px;
-  --font-size-n: 20px;
-  --font-size-nt: 26px;
-  --font-size-ms: 45px;
-  --font-size-m: 60px;
-  --font-size-l: 70px;
-  --font-size-ls: 110px;
-  --font-size-xl: 150px;
-  --padding: 30px;
+@layer {
+  :root {
+    --background-color: #0f0f0f;
+    --primary-color: #3868e3;
+    --secondary-color: #0ea5e9;
+    --secondary-color-faint: #0ea5e94a;
+    --accent-bg: #171717;
+    --underline: #007bff;
+    --text-color: #d4d4d4;
+    --border-color: #e5e7eb;
+    --title-color: #ffffff;
+    --box-shadow: 10px 0 60px 4px #162859;
+    --icon-color-inactive: #a3a3a3;
+    --warning-info: #ffa500;
+    --font-size-s: 16px;
+    --font-size-n: 20px;
+    --font-size-nt: 26px;
+    --font-size-ms: 45px;
+    --font-size-m: 60px;
+    --font-size-l: 70px;
+    --font-size-ls: 110px;
+    --font-size-xl: 150px;
+    --padding: 30px;
+  }
 }
 
 * {
@@ -32,7 +33,8 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  scroll-behavior: smooth;font-optical-sizing: auto;
+  scroll-behavior: smooth;
+  font-optical-sizing: auto;
   font-display: swap;
 }
 

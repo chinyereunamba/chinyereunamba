@@ -3,19 +3,34 @@ import BackArrow from "@/components/utils/BackArrow";
 import Link from "next/link";
 import { Button } from "@/components/utils/Button";
 import { sanityFetch } from "@/sanity/lib/fetch";
-import { projectQuery } from "@/sanity/lib/queries";
-import { SanityDocument } from "next-sanity";
+import { projectQuery, projectsQuery } from "@/sanity/lib/queries";
+import { client } from "@/sanity/lib/client";
 import Image from "next/image";
+import { QueryParams } from "next-sanity";
+import { notFound } from "next/navigation";
 
 interface Img {
   alt: string;
-  assert: { url: string };
+  asset: { url: string };
+}
+export async function generateStaticParams() {
+  const projects = await client.fetch(projectsQuery);
+
+  return projects.map((project) => ({
+    slug: project?.slug?.current,
+  }));
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const project = await sanityFetch<SanityDocument>(projectQuery, {
-    slug: params.slug,
+
+export default async function Page({ params }: { params: QueryParams }) {
+  const { data: project } = await sanityFetch({
+    query: projectQuery,
+    params: params, // Removed 'await'
   });
+
+  if (!project) {
+    return notFound();
+  }
 
   // Fallback for gallery images
   const imgs: Img[] = project?.gallery ?? [];

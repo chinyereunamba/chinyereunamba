@@ -8,22 +8,34 @@ import { client } from "@/sanity/lib/client";
 import Image from "next/image";
 import { QueryParams } from "next-sanity";
 import { notFound } from "next/navigation";
+import type { SanityDocument } from "@sanity/client";
+
 
 interface Img {
   alt: string;
   asset: { url: string };
 }
+
+type Project = SanityDocument & {
+  slug?: { current: string };
+  title?: string;
+  description?: string;
+  gallery?: Img[];
+  link?: string;
+};
+
+
 export async function generateStaticParams() {
-  const projects = await client.fetch(projectsQuery);
+  // const projects = await client.fetch(projectsQuery);
+  const projects: Project[] = await client.fetch(projectsQuery);
 
   return projects.map((project) => ({
     slug: project?.slug?.current,
   }));
 }
 
-
 export default async function Page({ params }: { params: QueryParams }) {
-  const { data: project } = await sanityFetch({
+  const { data: project } = await sanityFetch<Project>({
     query: projectQuery,
     params: params, // Removed 'await'
   });

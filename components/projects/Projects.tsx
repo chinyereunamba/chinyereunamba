@@ -6,10 +6,8 @@ import { projectsQuery } from "@/sanity/lib/queries";
 import { SanityDocument } from "next-sanity";
 import AnimatedContent from "../utils/Animate";
 
-async function Projects() {
-  const projects = await sanityFetch<SanityDocument[]>({
-    query: projectsQuery,
-  });
+function Projects({projects}: {projects: SanityDocument[]}) {
+ 
 
   return (
     <AnimatedContent

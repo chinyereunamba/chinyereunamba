@@ -10,7 +10,6 @@ import { QueryParams } from "next-sanity";
 import { notFound } from "next/navigation";
 import type { SanityDocument } from "@sanity/client";
 
-
 interface Img {
   alt: string;
   asset: { url: string };
@@ -23,7 +22,6 @@ type Project = SanityDocument & {
   gallery?: Img[];
   link?: string;
 };
-
 
 export async function generateStaticParams() {
   // const projects = await client.fetch(projectsQuery);

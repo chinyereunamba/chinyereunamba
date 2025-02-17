@@ -6,17 +6,24 @@ import Header from "@/components/layout/Header";
 import Intro from "@/components/layout/Intro";
 import Projects from "@/components/projects/Projects";
 import Skills from "@/components/skills/Skills";
-import Image from "next/image";
+import { sanityFetch } from "@/sanity/lib/fetch";
+import { blogsQuery, projectsQuery } from "@/sanity/lib/queries";
+import { SanityDocument } from "next-sanity";
 
-export default function Home() {
+export default async function Home() {
+  const projects = await sanityFetch<SanityDocument[]>({
+    query: projectsQuery,
+  });
+  const blogPosts = await sanityFetch<SanityDocument[]>({ query: blogsQuery });
+
   return (
     <main>
       <Header />
       <Intro />
       <About />
       <Skills />
-      <Projects />
-      <Blog />
+      <Projects projects={projects} />
+      <Blog blogPosts={blogPosts} />
       <Contact />
     </main>
   );

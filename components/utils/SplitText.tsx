@@ -10,7 +10,7 @@ interface SplitTextProps {
   easing?: string;
   threshold?: number;
   rootMargin?: string;
-  textAlign?: string;
+  textAlign?: "left" | "right" | "center" | "justify" | "initial" | "inherit";
   onLetterAnimationComplete?: () => void;
 }
 
@@ -23,7 +23,7 @@ const SplitText: React.FC<SplitTextProps> = ({
   easing = "easeOutCubic",
   threshold = 0.1,
   rootMargin = "-100px",
-  textAlign = "center",
+  textAlign = "center" as "left" | "right" | "center" | "justify" | "initial" | "inherit",
   onLetterAnimationComplete,
 }) => {
   const letters = text.split("");
@@ -56,8 +56,7 @@ const SplitText: React.FC<SplitTextProps> = ({
     letters.map((_, i) => ({
       from: animationFrom,
       to: inView ? animationTo : animationFrom,
-      delay: i * delay,
-      config: { easing },
+      config: { easing: easing as any },
       onRest: () => {
         animatedCount.current += 1;
         if (

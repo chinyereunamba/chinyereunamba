@@ -32,10 +32,7 @@ function Project({
     >
       {/* <div className={style.img}> */}
       <div className="mockup-browser bg-base-300 !w-2/3">
-        <div className="mockup-browser-toolbar">
-          <div className="input">https://mediaplur.com</div>
-        </div>
-
+        
         <Image
           src={img}
           height={300}

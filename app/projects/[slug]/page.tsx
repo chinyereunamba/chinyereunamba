@@ -23,19 +23,10 @@ type Project = SanityDocument & {
   link?: string;
 };
 
-export async function generateStaticParams() {
-  // const projects = await client.fetch(projectsQuery);
-  const projects: Project[] = await client.fetch(projectsQuery);
-
-  return projects.map((project) => ({
-    slug: project?.slug?.current,
-  }));
-}
-
 export default async function Page({ params }: { params: QueryParams }) {
-  const { data: project } = await sanityFetch<Project>({
-    query: projectQuery,
-    params: params, // Removed 'await'
+  const project = await sanityFetch<Project>({
+    query: projectsQuery,
+    params: params,
   });
 
   if (!project) {
@@ -68,8 +59,8 @@ export default async function Page({ params }: { params: QueryParams }) {
           {imgs.map((item, id) => (
             <div key={id}>
               <Image
-                src={item.asset.url}
-                alt={item.alt || "Project Image"}
+                src={item?.asset?.url}
+                alt={item?.alt || "Project Image"}
                 width={500}
                 height={500}
               />

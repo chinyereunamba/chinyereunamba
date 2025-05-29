@@ -17,6 +17,11 @@
   line-height: 1.1;
 }
 
+.about summary strong{
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
 .about .name b {
   color: var(--secondary-color);
 }

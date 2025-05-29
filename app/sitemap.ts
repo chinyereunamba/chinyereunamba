@@ -19,5 +19,11 @@ export default function Sitemap() {
       changeFrequency: "weekly",
       priority: 0.5,
     },
+    {
+      url: "https://chinyereunamba.vercel/projects/",
+      lastModified: new Date().toISOString(),
+      changeFrequency: "weekly",
+      priority: 0.5,
+    },
   ];
 }

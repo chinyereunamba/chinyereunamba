@@ -14,11 +14,11 @@ const config: Config = {
       },
       colors: {
         background: "#0f0f0f",
-        primary: "#3868e3",
-        secondary: "#0ea5e9",
+        primary: "var(--primary-color)",
+        secondary: "var(--secondary-color)",
         "secondary-faint": "#0ea5e94a",
         accent: "#171717",
-        
+
         underline: "#007bff",
         text: "#d4d4d4",
         border: "#e5e7eb",

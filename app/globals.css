@@ -25,6 +25,9 @@
     --font-size-ls: 110px;
     --font-size-xl: 150px;
     --padding: 30px;
+    --font-signika: 'Signika', sans-serif;
+    --font-cursive: serif;
+    --font-fira:'Fira', serif;
   }
 }
 

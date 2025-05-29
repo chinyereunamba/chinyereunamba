@@ -79,7 +79,7 @@ const SplitText: React.FC<SplitTextProps> = ({
         <animated.span
           key={index}
           style={props}
-          className="inline-block transform transition-opacity will-change-transform"
+          className="inline-block transform transition-opacity will-change-transform font-sans"
         >
           {letters[index] === " " ? " " : letters[index]}
         </animated.span>

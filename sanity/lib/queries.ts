@@ -1,7 +1,7 @@
 import { groq } from "next-sanity";
 
 // 1. Get all projects
-export const projectsQuery = groq`*[_type == "project"] {
+export const projectsQuery = groq`*[_type == "project" && defined(slug.current)] | order(publishedAt desc) {
   title,
   slug,
   description,

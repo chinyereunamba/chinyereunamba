@@ -7,11 +7,11 @@ import {
   DiJavascript,
   DiPython,
   DiHtml5,
-
 } from "react-icons/di";
 import { TbApi } from "react-icons/tb";
 import { SiDjango, SiTypescript, SiJavascript, SiHtmx } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
+import Title from "../utils/Title";
 function Skills() {
   const skills = [
     { skill: "HTML", icon: <DiHtml5 size={40} /> },

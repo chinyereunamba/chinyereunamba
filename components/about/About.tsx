@@ -32,15 +32,15 @@ function About() {
           </h3> */}
             <summary className="font-normal">
               I am an aspiring full-stack developer with over{" "}
-              <strong className="text-secondary">4 years</strong> of hands-on
+              <strong>4 years</strong> of hands-on
               experience in web development technologies. I have practical
               experience with{" "}
-              <strong className="text-secondary">HTML/CSS</strong>,{" "}
-              <strong className="text-secondary">Python</strong>,{" "}
-              <strong className="text-secondary">Django</strong>,{" "}
-              <strong className="text-secondary">Django Rest Framework</strong>,{" "}
-              <strong className="text-secondary">React.js</strong>, and{" "}
-              <strong className="text-secondary">Next.js</strong>. I am deeply
+              <strong>HTML/CSS</strong>,{" "}
+              <strong>Python</strong>,{" "}
+              <strong>Django</strong>,{" "}
+              <strong>Django Rest Framework</strong>,{" "}
+              <strong>React.js</strong>, and{" "}
+              <strong>Next.js</strong>. I am deeply
               passionate about expanding my skills further and exploring
               innovative projects.
             </summary>

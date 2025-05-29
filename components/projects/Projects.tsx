@@ -1,8 +1,6 @@
 import React from "react";
 import Project from "./Project";
 import style from "./Projects.module.css";
-import { sanityFetch } from "@/sanity/lib/fetch";
-import { projectsQuery } from "@/sanity/lib/queries";
 import { SanityDocument } from "next-sanity";
 import AnimatedContent from "../utils/Animate";
 
